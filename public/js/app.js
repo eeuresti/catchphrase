@@ -18,10 +18,11 @@ function pageLoad() {
 }
 
 function getPhrases() {
-  $.get("/phrases", function(res) {
-    var phrases = res.reverse();
-    renderPhrase(phrases);
-  });
+    $.get("/phrase", function(res) {
+        console.log(res);
+        var catchPhrases = res.reverse();
+        renderPhrases(phrases);
+    });
 }
 
 function renderPhrases(phrases) {

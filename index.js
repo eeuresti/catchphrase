@@ -16,20 +16,20 @@ app.use(bodyParser.urlencoded({
 }));
 
 var phrases = [{
-    word: "The Price is Right",
-    definition: "Come on down!"
+    word: "HTTP",
+    definition: "Hypertext transfer protocol: the standard protocol for transferring hypertext documents on the World Wide Web."
 }, {
-    word: "Wheel of Fortune",
-    definition: "I'd like to buy a vowel, Pat."
+    word: "Array",
+    definition: "Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. Neither the length of a JavaScript array nor the types of its elements are fixed.."
 }, {
-    word: "Press Your Luck",
-    definition: "Big bucks, no Whammies!"
+    word: "DOM",
+    definition: "one of the most-used APIs on the Web because it allows code running in a browser to access and interact with every node in the document."
 }, {
-    word: "Family Feud",
-    definition: "Survey says...!"
+    word: "Query",
+    definition: "Used to specify the query for a template. The attributes and content of the query are dependent on the type of datasource being used."
 }, {
-    word: "Who Wants To be a Millionaire",
-    definition: "I'd like to phone a friend."
+    word: "Boolean",
+    definition: "A boolean is a logical data type that can have only the values true or false."
 }];
 
 app.get("/", function(req, res) {
