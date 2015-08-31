@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CatchPhrase</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- jquery -->
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- underscore -->
+    <script src="/vendor/underscore/underscore-min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <!-- local -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script src="/static/js/app.js"></script>
+</head>
+
+</head>
+
+<body>
+    <div id="page-wrapper" class="well">
+        <!-- header -->
+        <header class="page-header">
+            <h1>CatchPhrase</h1>
+        </header>
+        <!-- new phrase -->
+        <form id="phrase-form" class="form-inline">
+            <input name="phrases[word]" type="text" class="form-control" id="new-phrase" placeholder="Game Show">
+            <input name="phrases[definition]" class="form-control" placeholder="Catch Phrase">
+            <button type="submit" class="btn btn-default">Add Word</button>
+        </form>
+        <!-- main -->
+        <ul class="list-group" id="phrase-ul">
+        </ul>
+    </div>
+</body>
+<script type="text/template" id="phrase-template">
+    <% console.log(word, definition) %>
+    <div class="phrase row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
+            <div class="phrase">
+
+                <div class="phrase-word" style="display: inline"><br/>
+                    <%= word %>
+                </div>
+                <div class="phrase-definition" style="display: inline"><br/>
+                    <%= definition %>
+                </div>
+                <!-- <div class="btn-group phrase-controls">
+                    <button class="delete btn btn-danger">DELETE</button>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</script>
+
+</html>
