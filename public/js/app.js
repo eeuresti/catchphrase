@@ -1,6 +1,6 @@
 // On page load
 $(function() {
-  getPhrases();
+  pageLoad();
 });
 
 // function definitions
@@ -11,22 +11,21 @@ function pageLoad() {
     e.preventDefault();
     $.post("/phrases", $(this).serialize())
       .done(function(res){
-        getFoods();
+        getPhrases();
         $("#new-phrase-form")[0].reset();
       });
   });
 }
 
 function getPhrases() {
-  $.get("/phrases", function(res){
-    console.log(res);
-    var catchPhrases = res.reverse();
-    renderPhrases(catchPhrases);
+  $.get("/phrases", function(res) {
+    var phrases = res.reverse();
+    renderPhrase(phrases);
   });
 }
 
 function renderPhrases(phrases) {
-  template = _.template($("#phrase-template").html());
+  template = _.template($("#phrases-template").html());
   phraseItems = phrases.map(function(phrase) {
     console.log('in map: ', phrase);
     return template({word: phrase.word , definition: phrase.definition});
