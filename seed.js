@@ -17,7 +17,7 @@ var phrases = [{
     definition: "A boolean is a logical data type that can have only the values true or false."
 }];
 
-// db.Phrase.remove({}, function(err, result){
+db.Phrase.remove({}, function(err, result){
 
   db.Phrase.create(phrases, function(err, phrases){
     if (err) { return console.log(err) };
@@ -25,4 +25,4 @@ var phrases = [{
     process.exit();
   });
 
-// });
+});
