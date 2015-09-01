@@ -18,22 +18,21 @@ function pageLoad() {
 }
 
 function getPhrases() {
-    $.get("/phrase", function(res) {
-        console.log(res);
-        var catchPhrases = res.reverse();
+    $.get("/phrases", function(res) {
+        var phrases = res.reverse();
+        console.log(phrases);
         renderPhrases(phrases);
     });
 }
 
 function renderPhrases(phrases) {
-  template = _.template($("#phrases-template").html());
-  phraseItems = phrases.map(function(phrase) {
-    console.log('in map: ', phrase);
-    return template({word: phrase.word , definition: phrase.definition});
+  template = _.template($("#phrase-template").html());
+  phraseWords = phrases.map(function(phrase) {
+    return template(phrase);
   });
 
   $("#phrase-ul").html("");
-  $("#phrase-ul").append(phraseItems);
+  $("#phrase-ul").append(phraseWords);
 }
 
 function deletePhrase(context) {
