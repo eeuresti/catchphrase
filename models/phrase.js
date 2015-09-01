@@ -12,5 +12,5 @@ definition: {
 }
 });
 
-var Food = mongoose.model('Phrase', PhraseSchema);
-module.exports = Food;
+var Phrase = mongoose.model('Phrase', PhraseSchema);
+module.exports = Phrase;

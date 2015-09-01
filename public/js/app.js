@@ -21,7 +21,7 @@ function getPhrases() {
     $.get("/phrases", function(res) {
         var phrases = res.reverse();
         console.log(phrases);
-        renderPhrases(phrases);
+        renderPhrases(res);
     });
 }
 
